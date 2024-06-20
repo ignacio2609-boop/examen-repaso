@@ -1,0 +1,34 @@
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Foto</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellidos</th>
+                <th scope="col">DNI</th>
+                <th scope="col">Teléfono</th>
+                <th scope="col">Asistencia</th>
+            </tr>
+        </thead>
+        <tbody>
+
+                <tr *ngFor="let alumno of alumnos">
+                    <td></td>
+                    <td>
+                        <p>{{ alumno.nombre }}</p>
+                    </td>
+                    <td>
+                        {{ alumno.apellidos }}
+                    </td>
+                    <td>
+                        {{ alumno.dni }}
+                    </td>
+                    <td>
+                        {{ alumno.telefono }}
+                    </td>
+                    <td></td>
+                </tr>
+
+        </tbody>
+    </table>
+</div>

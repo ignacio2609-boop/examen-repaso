@@ -1,0 +1,28 @@
+<h1 class="display-6 p-1">Agregar alumno</h1>
+    <form [formGroup]="alumnoForm">
+        <div class="row">
+            <div class="col">
+                <div class="m-1">
+                    <label for="nombre" class="form-label">Nombre</label>
+                    <input formControlName="nombre" type="text" class="form-control" id="nombre" placeholder="Ingresa el nombre">
+                </div>
+                <div class="m-1">
+                    <label for="pais" class="form-label">DNI</label>
+                    <input formControlName="DNI" type="text" class="form-control" id="DNI" placeholder="Ingresa el DNI">
+                </div>
+            </div>
+            <div class="col">
+                <div class="m-1">
+                    <label for="apellido" class="form-label">Apellido</label>
+                    <input formControlName="apellido" type="text" class="form-control" id="apellido" placeholder="Ingresa el apellido">
+                </div>
+                <div class="m-1">
+                    <label for="ciudad" class="form-label">Teléfono</label>
+                    <input formControlName="telefono" type="text" class="form-control" id="telefono" placeholder="Ingresa el teléfono">
+                </div>
+            </div>
+    </div>
+    <div class="d-grid gap-2 col mx-auto m-3">
+        <button class="btn btn-outline-dark" type="button" (click)="agregarAlumno()">Agregar alumno</button>
+    </div>
+    </form>
