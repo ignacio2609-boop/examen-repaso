@@ -8,13 +8,13 @@
                 </div>
                 <div class="m-1">
                     <label for="pais" class="form-label">DNI</label>
-                    <input formControlName="DNI" type="text" class="form-control" id="DNI" placeholder="Ingresa el DNI">
+                    <input formControlName="dni" type="text" class="form-control" id="dni" placeholder="Ingresa el DNI">
                 </div>
             </div>
             <div class="col">
                 <div class="m-1">
-                    <label for="apellido" class="form-label">Apellido</label>
-                    <input formControlName="apellido" type="text" class="form-control" id="apellido" placeholder="Ingresa el apellido">
+                    <label for="apellidos" class="form-label">Apellido</label>
+                    <input formControlName="apellidos" type="text" class="form-control" id="apellidos" placeholder="Ingresa el apellido">
                 </div>
                 <div class="m-1">
                     <label for="ciudad" class="form-label">Teléfono</label>
@@ -23,6 +23,6 @@
             </div>
     </div>
     <div class="d-grid gap-2 col mx-auto m-3">
-        <button class="btn btn-outline-dark" type="button" (click)="agregarAlumno()">Agregar alumno</button>
+        <button class="btn btn-outline-dark" type="button" (click)="sendAlumno()">Agregar alumno</button>
     </div>
     </form>

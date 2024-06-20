@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Alumno } from './alumno.model';
 import { CommonModule } from '@angular/common';
 
@@ -15,4 +15,7 @@ export class ListComponent {
     { nombre: "María", apellidos: "Rodríguez Sánchez", dni: "87654321X.", telefono: "678901234" },
     { nombre: "Carlos", apellidos: "Fernández Díaz", dni: "11223344A", telefono: "712345678" }
   ];
+
+  @Input() alumnosInput: any
+  
 }
