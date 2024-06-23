@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
-import { Alumno } from '../list/alumno.model';
+import { Alumno } from '../../pages/home/alumno.model';
 
 @Component({
   selector: 'app-form',
@@ -30,7 +30,8 @@ export class FormComponent {
         dni: this.alumnoForm.value.dni,
         telefono: this.alumnoForm.value.telefono,
         }
-      this.formEvent.emit(nuevoAlumno)
+      this.formEvent.emit(nuevoAlumno);
+      this.alumnoForm.reset();
     } else {
       console.log('Formulario no válido');
     }

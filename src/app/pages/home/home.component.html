@@ -1,6 +1,50 @@
 <app-header></app-header>
 <div class="container-fluid col-6">
-    <app-list [alumnosInput]="alumno"></app-list>
+    <div class="table-responsive">
+        <table class="table justify-content-center">
+            <thead>
+                <tr>
+                    <th scope="col">Foto</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Apellidos</th>
+                    <th scope="col">DNI</th>
+                    <th scope="col">Teléfono</th>
+                    <th scope="col">Asistencia</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let alumno of alumnos" id="{{ alumno.dni }}">
+                    <td class="align-middle">
+                        <img src="https://api.multiavatar.com/{{alumno.nombre}} {{alumno.nombre}}.svg" viewBox="0 0 231 231">
+                    </td>
+                    <td class="align-middle">
+                        {{ alumno.nombre }}
+                    </td>
+                    <td class="align-middle">
+                        {{ alumno.apellidos }}
+                    </td>
+                    <td class="align-middle" id="dni">
+                        {{ alumno.dni }}
+                    </td>
+                    <td class="align-middle">
+                        {{ alumno.telefono }}
+                    </td>
+                    <td class="align-middle">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col m-1">
+                                    <button class="btn btn-success btn-sm" type="button" [disabled]="this.disable == 'Alumno  {{alumno.dni}}'" (click)="presente(alumno)" id="Alumno {{alumno.dni}}">Presente</button>
+                                </div>
+                                <div class="col m-1">
+                                    <button class="btn btn-outline-danger btn-sm" type="button" (click)="deleteAlumno(alumno)" id="delete">Eliminar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
     <app-form (formEvent)="addAlumno($event)"></app-form>
 </div>
 <app-footer></app-footer>
