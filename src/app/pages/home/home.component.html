@@ -31,9 +31,9 @@
                     </td>
                     <td class="align-middle">
                         <div class="container-fluid">
-                            <div class="row">
+                            <div class="row" >
                                 <div class="col m-1">
-                                    <button class="btn btn-success btn-sm" type="button" [disabled]="this.disable == 'Alumno  {{alumno.dni}}'" (click)="presente(alumno)" id="Alumno {{alumno.dni}}">Presente</button>
+                                    <button class="btn btn-success btn-sm" type="button" [disabled]="disabledButtons[alumno.dni]" (click)="presente(alumno)" id="presente">Presente</button>
                                 </div>
                                 <div class="col m-1">
                                     <button class="btn btn-outline-danger btn-sm" type="button" (click)="deleteAlumno(alumno)" id="delete">Eliminar</button>
